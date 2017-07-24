@@ -4,7 +4,7 @@
   "description": "Sterling Coin Count is an application that given a number of pennies will calculate the minimum number of Sterling coins needed to make that amount.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node source/test/index.js"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "eslint": "^4.3.0",
-    "eslint-plugin-react": "^7.1.0"
+    "eslint-plugin-react": "^7.1.0",
+    "tape": "^4.7.0"
   }
 }
