@@ -1,0 +1,32 @@
+{
+  "name": "sterling-coin-count",
+  "version": "1.0.0",
+  "description": "Sterling Coin Count is an application that given a number of pennies will calculate the minimum number of Sterling coins needed to make that amount.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kcodogwu/sterling-coin-count.git"
+  },
+  "keywords": [
+    "sterling",
+    "coin",
+    "count",
+    "app"
+  ],
+  "author": "Kingson Chinedu Odogwu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kcodogwu/sterling-coin-count/issues"
+  },
+  "homepage": "https://github.com/kcodogwu/sterling-coin-count#readme",
+  "engines": {
+    "node": "6.11.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.3.0",
+    "eslint-plugin-react": "^7.1.0"
+  }
+}
