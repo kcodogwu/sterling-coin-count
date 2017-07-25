@@ -1,3 +1,3 @@
 'use strict';
 
-require('./coin-counter');
+require('./test-coin-counter');
