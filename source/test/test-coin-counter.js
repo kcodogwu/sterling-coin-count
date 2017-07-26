@@ -66,13 +66,13 @@ test('Test the coin counting function', assert => {
   );
 
   assert.equal(
-    coinCounter('123p'),
+    coinCounter('123p').join(', '),
     '1 x £1, 1 x 20p, 1 x 2p, 1 x 1p',
     'Given valid input, should return expectted breakdown, starting with the highest coin and then descending till total amount is achieved.'
   );
 
   assert.equal(
-    coinCounter('£12.34'),
+    coinCounter('£12.34').join(', '),
     '6 x £2, 1 x 20p, 1 x 10p, 2 x 2p',
     'Given valid input, should return expectted breakdown, starting with the highest coin and then descending till total amount is achieved.'
   );

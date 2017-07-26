@@ -76,8 +76,8 @@ const coinCounter = (value) => {
       i++;
     }
 
-    return result.join(', ');
+    return result;
   }
 };
 
-module.exports = coinCounter;
+export default coinCounter;
