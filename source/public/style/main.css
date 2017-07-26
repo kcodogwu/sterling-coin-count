@@ -1,3 +1,5 @@
+@import "normalize.css";
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, Helvetica, sans-serif;
   font-size: 100%;
@@ -33,7 +35,7 @@ div#content {
   background-color: rgb(255, 255, 255);
 }
 
-label, input {
+span, input {
   display: block;
   margin-bottom: 10px;
   font-size: 1.375rem;
@@ -44,6 +46,12 @@ input {
   padding: 10px 5px 10px 5px;
 }
 
+input[type='text'] {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #666;
+}
+
 div#result, input {
   width: 100%
 }
@@ -52,4 +60,21 @@ div#result {
   border-top-width: 3px;
   border-top-style: solid;
   border-top-color: #666;
+  margin-top: 30px;
+  padding-top: 10px;
+}
+
+.hide {
+  display: none;
+  visibility: hidden;
+}
+
+.result-child {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #666;
+  margin-bottom: 5px;
+  padding: 20px 10px 20px 20px;
+  font-size: 1.375rem;
+  text-align: center;
 }
