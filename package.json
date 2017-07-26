@@ -1,13 +1,13 @@
 {
   "name": "sterling-coin-count",
   "version": "1.0.0",
-  "description": "Sterling Coin Count is an application that given a number of pennies will calculate the minimum number of Sterling coins needed to make that amount.",
+  "description": "Sterling Coin Count is an application that given a number of pennies will calculate the minimum number of pound sterling coins needed to make that amount.",
   "main": "index.js",
   "scripts": {
     "clean": "rd dist /s /q && md dist\\public\\js",
     "check": "npm run lint && npm run test && npm run clean",
     "lint": "eslint source",
-    "start": "npm run check && webpack-dev-server",
+    "start": "npm run check && webpack-dev-server -p",
     "test": "node source/test/index.js"
   },
   "repository": {

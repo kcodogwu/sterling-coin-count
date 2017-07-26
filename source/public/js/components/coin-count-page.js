@@ -1,8 +1,11 @@
 'use strict';
 
-// load modules
-
-
+/**
+ * Function to use and create CoinCountPage component
+ * 
+ * @param {Object} React - React module variable
+ * @param {Object} PropTypes - React PropTypes module variable
+ */
 const coinCountPageFactory = (React, PropTypes) => {
   const { func, object, shape } = PropTypes;
 
