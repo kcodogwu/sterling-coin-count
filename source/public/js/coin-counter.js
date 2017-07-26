@@ -11,6 +11,10 @@ const coinCounter = (value) => {
   let coinCount = 0;
   let remainder = 0;
 
+  const errorMsg = `INVALID INPUT!
+
+Please enter valid inputs like:  432, 213p, £16.23p, £14, £54.04, £23.33333, 001.41p,...`;
+
   const result = [];
 
   const commonCoins = [
@@ -49,7 +53,7 @@ const coinCounter = (value) => {
   }
 
   if (!check) {
-    return 'INVALID INPUT!';
+    return errorMsg;
   } else {
     beforeDecimalPoint = strArr[0];
     afterDecimalPoint = strArr[1] === undefined ? '' : strArr[1];
@@ -80,4 +84,4 @@ const coinCounter = (value) => {
   }
 };
 
-export default coinCounter;
+module.exports = coinCounter;

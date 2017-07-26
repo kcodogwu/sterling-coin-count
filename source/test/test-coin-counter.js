@@ -4,63 +4,67 @@
 const test = require('tape');
 const coinCounter = require('../public/js/coin-counter');
 
+const errorMsg = `INVALID INPUT!
+
+Please enter valid inputs like:  432, 213p, £16.23p, £14, £54.04, £23.33333, 001.41p,...`;
+
 test('Test the coin counting function', assert => {
   assert.equal(
     coinCounter('13x'),
-    'INVALID INPUT!',
+    errorMsg,
     'Given invalid input, should return a message that shows invalid input.'
   );
 
   assert.equal(
     coinCounter('13p.02'),
-    'INVALID INPUT!',
+    errorMsg,
     'Given invalid input, should return a message that shows invalid input.'
   );
 
   assert.equal(
     coinCounter('£p'),
-    'INVALID INPUT!',
+    errorMsg,
     'Given invalid input, should return a message that shows invalid input.'
   );
 
   assert.equal(
-    (coinCounter('432') !== 'INVALID INPUT!') && (coinCounter('432') !== undefined),
+    (coinCounter('432') !== errorMsg) && (coinCounter('432') !== undefined),
     true,
     'Given valid input, should not return a message that shows invalid input.'
   );
 
   assert.equal(
-    (coinCounter('213p') !== 'INVALID INPUT!') && (coinCounter('432') !== undefined),
+    (coinCounter('213p') !== errorMsg) && (coinCounter('432') !== undefined),
     true,
     'Given valid input, should not return a message that shows invalid input.'
   );
 
   assert.equal(
-    (coinCounter('£16.23p') !== 'INVALID INPUT!') && (coinCounter('432') !== undefined),
+    (coinCounter('£16.23p') !== errorMsg) && (coinCounter('432') !== undefined),
     true,
     'Given valid input, should not return a message that shows invalid input.'
   );
 
   assert.equal(
-    (coinCounter('£14') !== 'INVALID INPUT!') && (coinCounter('432') !== undefined),
+    (coinCounter('£14') !== errorMsg) && (coinCounter('432') !== undefined),
     true,
     'Given valid input, should not return a message that shows invalid input.'
   );
 
   assert.equal(
-    (coinCounter('£54.04') !== 'INVALID INPUT!') && (coinCounter('432') !== undefined),
+    (coinCounter('£54.04') !== errorMsg) && (coinCounter('432') !== undefined),
     true,
     'Given valid input, should not return a message that shows invalid input.'
   );
 
   assert.equal(
-    (coinCounter('£23.33333') !== 'INVALID INPUT!') && (coinCounter('432') !== undefined),
+    (coinCounter('£23.33333') !== errorMsg) && (coinCounter('432') !== undefined),
     true,
     'Given valid input, should not return a message that shows invalid input.'
   );
 
   assert.equal(
-    (coinCounter('001.41p') !== 'INVALID INPUT!') && (coinCounter('432') !== undefined),
+    (coinCounter('001.41p') !== errorMsg) && (coinCounter('432') !== undefined),
     true,
     'Given valid input, should not return a message that shows invalid input.'
   );

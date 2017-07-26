@@ -1,7 +1,7 @@
 'use strict';
 
 // load modules
-import coinCounter from 'coin-counter';
+import coinCounter from './coin-counter';
 
 const coinCountForm = document.forms['coin-count-form'];
 const amount = coinCountForm.amount;
@@ -34,12 +34,17 @@ const submitHandler = (e) => {
 
   if (Array.isArray(result)) {
     while (true) {
-      div = document.createElement('div');
-
       if (i < result.length) {
+        div = document.createElement('div');
         div.innerText = result[i];
         resultHtml.appendChild(div);
+      } else {
+        break;
       }
+
+      i++;
     }
   }
 };
+
+addEvent(coinCountForm, 'submit', submitHandler);
