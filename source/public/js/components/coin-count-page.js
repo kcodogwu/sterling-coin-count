@@ -17,8 +17,8 @@ const coinCountPageFactory = (React, PropTypes) => {
       return (
         <div id="wrapper">
           <header><h1>Sterling Coin Count</h1></header>
-          <div id="content" action="#" method="POST" onSubmit={ submitHandler }>
-            <form id="coin-count-form">
+          <div id="content">
+            <form id="coin-count-form"  action="#" method="POST" onSubmit={ submitHandler }>
               <label>
                 <span>Enter a pound sterling amount below</span>
                 <input type="text" name="amount" id="amount" />
